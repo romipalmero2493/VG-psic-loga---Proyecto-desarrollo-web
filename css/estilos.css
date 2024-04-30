@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Inicio estilo de Titulos */
+
+h1 {
+    margin: 0px;
+    padding: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2e2e2e;
+}
+h2 {
+    margin: 0px;
+    padding: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2e2e2e;
+}
+
+h3 {
+    margin: 0px;
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+h4 {
+    margin: 0px;
+    padding: 16px 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*Fin estilo de Titulos */
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-between;
+    width: 100%;
+    margin: 0%;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width:961px) {
+    .section-contacto {
+        display: flex;
+        flex-direction: column;
+        /* background-color: rgb(80, 80, 80); */
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-grow: 1;
+        /* Permite que el main crezca para ocupar el espacio restante */
+        margin-top: 128px;
+        padding: 16px;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        /* Ajusta la posición en la parte superior */
+        z-index: 100;
+    }
+
+    .logo-header {
+        /*   background-color: #fffae0; */
+        background-color: #bddcde;
+        width: 100%;
+        height: 80px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .titulo-header {
+        font-family: "Cinzel", serif;
+        font-size: 24px;
+        font-weight: lighter;
+        color: #0c0c0c;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sub-header {
+        padding: 8px;
+        font-family: "Cinzel", serif;
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    .linea-vertical {
+        border-left: 1px solid #0c0c0c;
+        /* Establece la línea vertical con color negro */
+        height: 24px;
+        /* Ajusta la altura de la línea según sea necesario */
+        margin: auto 0px;
+        /* Centra la línea horizontalmente */
+    }
+
+    .logo {
+        cursor: pointer;
+        /* cuando apoyo cursor visualizo que se puede seleccionar */
+    }
+
+    .navbar {
+        background-color: #003049;
+        width: 100%;
+        /* ancho */
+        height: 56px;
+        /* alto */
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        /* la lista no posee viñeta */
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 8px;
+    }
+
+    .nav-links li a {
+        padding: 8px 16px;
+        color: #fefefe;
+        text-decoration: none;
+    }
+
+    .nav-links li:hover a {
+        color: #111c1d;
+        /* Cambia el color al hacer hover */
+        text-decoration: none;
+        /* No posee subrayado al posicionarse por encima */
+    }
+
+    .nav-links li:hover {
+        background: #fefefe;
+        border-radius: 16px;
+    }
+
+    .logo-mobile,
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 960px) {
+    .logo-header {
+        display: none;
+    }
+
+    .titulo-header {
+        font-family: "Cinzel", serif;
+        font-size: 16px;
+        font-weight: lighter;
+        color: #fefefe;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sub-header {
+        padding: 8px;
+        font-family: "Cinzel", serif;
+        font-size: 8px;
+        margin: 0px;
+        color: #fefefe;
+    }
+
+    .linea-vertical {
+        border-left: 1px solid #fefefe;
+        /* Establece la línea vertical con color negro */
+        height: 16px;
+        /* Ajusta la altura de la línea según sea necesario */
+        margin: auto 0px;
+        /* Centra la línea horizontalmente */
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 24px 8px;
+        background-color: #003049;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+}
+
+.navbar-toggler-icon {
+    font-size: 24px;
+    color: #fefefe;
+}
+
+/* Fin Nav */
+
+.main-home{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(80, 80, 80); */
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.iconos-contacto {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*Inicio Formulario de contacto y datos */
+.contacto {
+    padding: 32px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container-form {
+    background-color: #e6eef4;
+    width: 344px;
+    height: 100%;
+    padding: 16px;
+    margin: 0px;
+    padding: 16px;
+    border-radius: 16px;
+    color: #003049;
+    box-shadow: 0px 0px 8px gray;
+}
+
+.btn-primary {
+    background-color: #003049;
+    color: #fefefe;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+@media only screen and (max-width: 960px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+}
+/*Fin Formulario de contacto y datos*/
+
+/*Inicio Grilla para tratamientos */
+.section-tratamientos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(12, 72px);
+    grid-template-rows: repeat(6, 72px);
+    grid-gap: 24px; 
+    grid-template-areas:
+        "img1 img1 img1 img1 img1 img1 img2 img2 img2 img3 img3 img3"
+        "img1 img1 img1 img1 img1 img1 img2 img2 img2 img3 img3 img3"
+        "img1 img1 img1 img1 img1 img1 img4 img4 img4 img5 img5 img5"
+        "img1 img1 img1 img1 img1 img1 img4 img4 img4 img5 img5 img5"
+        "img6 img6 img6 img7 img7 img7 img8 img8 img8 img9 img9 img9"
+        "img6 img6 img6 img7 img7 img7 img8 img8 img8 img9 img9 img9";
+}
+
+.item {
+    /* border: #fefefe 5px solid; */
+    border: black 5px solid;
+    border-radius: 16px;
+
+}
+.titulo-tarjetas{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    /* line-height: 20px; */
+    bottom: 20%;
+    right: 8%;
+    max-width: 50%;
+}
+.item1 {
+    grid-area: img1;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/online.jpg);
+    background-size: cover;
+}
+
+.item2 {
+    grid-area: img2;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/alcoholismo.jpg);
+    background-size: cover;
+
+}
+
+.item3 {
+    grid-area: img3;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/depresion.jpg);
+    background-size: cover;
+}
+
+.item4 {
+    grid-area: img4;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/ansiedad.jpg);
+    background-size: cover;
+}
+
+.item5 {
+    grid-area: img5;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/pareja.jpg);
+    background-size: cover;
+}
+
+.item6 {
+    grid-area: img6;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/panico2.jpg);
+    background-size: cover;
+}
+
+.item7 {
+    grid-area: img7;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/estres.jpg);
+    background-size: cover;
+}
+
+.item8 {
+    grid-area: img8;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/familia.jpg);
+    background-size: cover;
+}
+
+.item9 {
+    grid-area: img9;
+    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/cognitivo-conductual.jpg);
+    background-size: cover;
+}
+
+/*Fin Grilla para tratamientos */
+
+/* Inicio FAQs */
+.preguntas-frecuentes {
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.accordion {
+    margin: 0px 156px;
+}
+
+.accordion-body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.accordion-item{
+    border-color: #111c1d;  
+}
+
+.accordion-button:not(.collapsed) {
+    color: #003049;
+    background-color: #deedee;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+/* Fin FAQs */
+
+/* Inicio pagina principal */
+.atencion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 32px;
+    gap: 24px;
+}
+/* Fin pagina principal */
+
+/* Inicio footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #FDF0D5; */
+    background-color: #bddcde;
+    padding: 16px 0;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.titulo-footer {
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #0c0c0c;
+    margin: 0px;
+}
+
+.sub-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo-entre-lineas {
+    color: #2e2e2e;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 8px;
+    margin: 0px;
+}
+
+hr {
+    width: 128px;
+    height: 1px;
+    /* Altura de la línea */
+    background-color: #2e2e2e;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px;
+    /* Añade margen superior para separar del contenido anterior */
+}
+
+.social-links a {
+    margin: 0px 16px;
+    text-align: center;
+    color: #0c0c0c;
+    font-size: 24px;
+}
+
+/* Fin Footer */
