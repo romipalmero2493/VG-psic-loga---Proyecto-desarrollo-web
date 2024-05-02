@@ -270,6 +270,20 @@ body {
         display: none;
     }
 
+    a {
+        text-decoration: none;
+        color: #fefefe;
+        padding: 8px;
+    }
+
+    a:hover {
+        color: #a8dadc;
+        /* Cambia el color al hacer hover */
+        text-decoration: none;
+        /* No posee subrayado al posicionarse por encima */
+
+    }
+
     .navbar {
         display: flex;
         flex-direction: row;
@@ -409,9 +423,10 @@ body {
 }
 
 @media (min-width: 961px) {
-    .galeria{
+    .galeria {
         margin: 0px 156px 0px;
     }
+
     .wide {
         grid-column: span 3;
     }
@@ -490,6 +505,7 @@ body {
 }
 
 /* Fin pagina principal */
+
 
 
 /* Inicio footer */
