@@ -58,10 +58,20 @@ p {
     color: #2e2e2e;
 }
 
-.titulos-secciones {
-    margin-top: 128px;
-    padding: 8px;
+@media only screen and (min-width:961px) {
+    .titulos-secciones {
+        margin-top: 128px;
+        padding: 8px;
+    }
 }
+
+@media only screen and (max-width: 960px) {
+    .titulos-secciones {
+        margin-top: 8px;
+        padding: 8px;
+    }
+}
+
 
 /*Fin estilo de Titulos */
 
@@ -74,14 +84,6 @@ body {
     min-height: 100vh;
 }
 
-@media only screen and (min-width:961px) {
-    .preguntas-frecuentes {
-        flex-grow: 1;
-        /* Permite que el main crezca para ocupar el espacio restante */
-        margin-top: 128px;
-        padding: 16px;
-    }
-}
 
 @media only screen and (min-width:961px) {
 
@@ -96,7 +98,6 @@ body {
         align-content: center;
         flex-grow: 1;
         /* Permite que el main crezca para ocupar el espacio restante */
-        margin-top: 128px;
         padding: 16px;
     }
 
@@ -372,22 +373,24 @@ body {
 
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
-    
-    
+
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.titulo-tarjetas{
-font-size: 24px;
-font-weight: bold;
-padding: 8px;
-border-radius: 8px;
-text-align: center;
-background-color: #002f4944;
-text-transform: uppercase;
-color: #fefefe;
+
+.titulo-tarjetas {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #002f4944;
+    text-transform: uppercase;
+    color: #fefefe;
 }
+
 .item:hover {
     filter: opacity(0.9);
     transform: scale(1.04);
@@ -401,10 +404,14 @@ color: #fefefe;
     padding-bottom: 16px;
     grid-auto-flow: dense;
     /* busca la manera de acomodar elementos en el grid */
-    margin: 0px 156px 0px;
+    /* margin: 0px 156px 0px; */
+    margin: 0px 16px 0px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 961px) {
+    .galeria{
+        margin: 0px 156px 0px;
+    }
     .wide {
         grid-column: span 3;
     }
@@ -461,23 +468,27 @@ color: #fefefe;
     padding: 32px;
     gap: 32px;
 }
-.titulo-card{
+
+.titulo-card {
     font-weight: bold;
-    text-transform: uppercase;  
-    padding-bottom: 8px; 
+    text-transform: uppercase;
+    padding-bottom: 8px;
 }
-.card-img-top{
+
+.card-img-top {
     height: 190px;
     width: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.card{
+
+.card-home {
     border-radius: 8px;
     border-color: #669bbc;
     background-color: #f6feff;
 }
+
 /* Fin pagina principal */
 
 
