@@ -58,6 +58,11 @@ p {
     color: #2e2e2e;
 }
 
+.titulos-secciones {
+    margin-top: 128px;
+    padding: 8px;
+}
+
 /*Fin estilo de Titulos */
 
 body {
@@ -360,91 +365,53 @@ body {
     padding: 16px;
 }
 
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.titulo-tarjetas{
+font-size: 24px;
+font-weight: bold;
+padding: 8px;
+border-radius: 8px;
+text-align: center;
+background-color: #002f4944;
+text-transform: uppercase;
+color: #fefefe;
+}
+.item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
 .galeria {
     display: grid;
-    grid-template-columns: repeat(12, 72px);
-    grid-template-rows: repeat(6, 72px);
-    grid-gap: 24px;
-    grid-template-areas:
-        "img1 img1 img1 img1 img1 img1 img2 img2 img2 img3 img3 img3"
-        "img1 img1 img1 img1 img1 img1 img2 img2 img2 img3 img3 img3"
-        "img1 img1 img1 img1 img1 img1 img4 img4 img4 img5 img5 img5"
-        "img1 img1 img1 img1 img1 img1 img4 img4 img4 img5 img5 img5"
-        "img6 img6 img6 img7 img7 img7 img8 img8 img8 img9 img9 img9"
-        "img6 img6 img6 img7 img7 img7 img8 img8 img8 img9 img9 img9";
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+    padding-bottom: 16px;
+    grid-auto-flow: dense;
+    /* busca la manera de acomodar elementos en el grid */
+    margin: 0px 156px 0px;
 }
 
-.item {
-    /* border: #fefefe 5px solid; */
-    border: black 5px solid;
-    border-radius: 16px;
+@media (min-width: 600px) {
+    .wide {
+        grid-column: span 3;
+    }
 
-}
-
-.titulo-tarjetas {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    text-align: end;
-    bottom: 20%;
-    right: 8%;
-    max-width: 50%;
-}
-
-.item1 {
-    grid-area: img1;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/online.jpg);
-    background-size: cover;
-}
-
-.item2 {
-    grid-area: img2;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/alcoholismo.jpg);
-    background-size: cover;
-
-}
-
-.item3 {
-    grid-area: img3;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/depresion.jpg);
-    background-size: cover;
-}
-
-.item4 {
-    grid-area: img4;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/ansiedad.jpg);
-    background-size: cover;
-}
-
-.item5 {
-    grid-area: img5;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/pareja.jpg);
-    background-size: cover;
-}
-
-.item6 {
-    grid-area: img6;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/panico2.jpg);
-    background-size: cover;
-}
-
-.item7 {
-    grid-area: img7;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/estres.jpg);
-    background-size: cover;
-}
-
-.item8 {
-    grid-area: img8;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/familia.jpg);
-    background-size: cover;
-}
-
-.item9 {
-    grid-area: img9;
-    background: linear-gradient(to right, transparent, #fefefe), url(../assets/img/cognitivo-conductual.jpg);
-    background-size: cover;
+    .tall {
+        grid-row: span 2;
+    }
 }
 
 /*Fin Grilla para tratamientos */
