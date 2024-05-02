@@ -67,7 +67,7 @@ body {
 }
 
 @media only screen and (min-width:961px) {
-    .section-contacto {
+    .section-contacto, .preguntas-frecuentes, .container-perfil {
         display: flex;
         flex-direction: column;
         /* background-color: rgb(80, 80, 80); */
@@ -436,12 +436,6 @@ body {
 /*Fin Grilla para tratamientos */
 
 /* Inicio FAQs */
-.preguntas-frecuentes {
-    flex-grow: 1;
-    /* Permite que el main crezca para ocupar el espacio restante */
-    margin-top: 128px;
-    padding: 16px;
-}
 
 @media only screen and (min-width: 992px){
     .accordion {
